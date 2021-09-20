@@ -29,7 +29,7 @@
 
 . npm i para baixar as dependências do projeto
 
-. npm start para inciar
+. npm start para inciar a aplicação
 
 ## Referências
    
