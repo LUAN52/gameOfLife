@@ -16,9 +16,9 @@
 ## Tecnologias
 
 #
-  . React
-  . Html
-  . Css
+  .  React
+  .  Html
+  .  Css
 
 ## Referências
 
