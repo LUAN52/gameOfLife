@@ -23,9 +23,19 @@
 
 . Css
 
+## Intruções
 
+  #
+
+. npm i para baixar as dependências do projeto
+
+. npm start para inciar a aplicação
 
 ## Referências
+   
+ 
+
+
 
 [Wikipedia](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
 
