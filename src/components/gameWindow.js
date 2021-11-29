@@ -18,7 +18,7 @@ export default class GameWindow extends React.Component {
         }
     }
     
-    checknNeighbors(grid,i,j,lineSize,columnSize,setState)
+    checknNeighbors(grid,i,j,lineSize,columnSize)
     {   
             
           let countNeighbors = 0
@@ -26,7 +26,7 @@ export default class GameWindow extends React.Component {
 
           if(this.state.auxiliaryGrid.length>0)
           {
-              setState({auxiliaryGrid:this.generateGrid()})
+              this.setState({auxiliaryGrid:this.generateGrid()})
           }
 
           matrizAuxiliar = this.state.auxiliaryGrid;
@@ -103,11 +103,11 @@ export default class GameWindow extends React.Component {
        
     }
 
-    run(grid,setState)
+    run(grid)
     {   
         grid.map((line,lineIndex)=>{
-           return line.map((coluna,columnIndex)=>{
-               return this.checknNeighbors(grid,lineIndex,columnIndex,50,50,setState)
+           return line.map((column,columnIndex)=>{
+               return this.checknNeighbors(grid,lineIndex,columnIndex,50,50)
             })
         })
     }
@@ -144,16 +144,13 @@ export default class GameWindow extends React.Component {
         this.setState({auxiliaryGrid:this.generateGrid()})
     }
 
-    
-
     render() {
        
         return (
             <>
             <div className="buttomContainer">
             <buttom  className="buttom"onClick={()=>{
-                const setState = this.setState.bind(this)
-                this.run(this.state.grid,setState)
+                this.run(this.state.grid)
                 this.setState({grid:this.state.auxiliaryGrid})
                 this.setButtom(true)
                 this.setLabel("trocar imagem")
